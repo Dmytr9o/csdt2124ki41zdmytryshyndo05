@@ -27,8 +27,12 @@ jobs:
       run: |
         pip install pyinstaller
         pyinstaller --onefile tiktactoe.py
-    - name: Chek all files in dir
-      run: ls
+    - name: Check all files in dir
+      run: |
+          ls
+          cd build
+          ls
+          pwd
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
