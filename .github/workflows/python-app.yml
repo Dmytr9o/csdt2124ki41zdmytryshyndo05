@@ -37,10 +37,9 @@ jobs:
     - name: Commit compiled Python files
       run: |
         git config user.name "Dmytr9o"
-        git branch -m dev
         git add __pycache__  # Додаємо файли, які були компільовані
         git commit -m "Add compiled Python files"
-        git sync
+        git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
