@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: python-build
-        path: dist/tiktactoe.exe # Вкажіть шлях до вашого скомпільованого файлу Python
+        path: build/tiktactoe.exe # Вкажіть шлях до вашого скомпільованого файлу Python
 
   
 
