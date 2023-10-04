@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.10 # Ви можете вказати версію Python, яку ви хочете використовувати
+        python-version: 3.12.0 # Ви можете вказати версію Python, яку ви хочете використовувати
 
     #- name: Install dependencies
     #  run: pip install -r requirements.txt  # Якщо у вас є файли вимог, ви можете їх встановити тут
