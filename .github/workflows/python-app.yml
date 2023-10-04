@@ -35,12 +35,24 @@ jobs:
         name: python-build
         path: build/tiktactoe # Вкажіть шлях до вашого скомпільованого файлу Python
 
-    - name: Pull
-      uses: peter-evans/create-pull-request@v5
-      with:
+    - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
           token: ${{ secrets.GH_SECRET }}
-          branch: feature-branch
+          commit-message: Update report
           committer: GitHub <noreply@github.com>
-          title: Запит на внесення змін
-          body: Додавання нової функціональності
-          base: main
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: feature-branch
+          delete-branch: true
+          title: 'Update report'
+          body: |
+            Додавання нової функціональності
+          labels: |
+            report
+            automated pr
+          assignees: Dmitr9o
+          reviewers: Dmitr9o
+          milestone: 1
+          draft: false
