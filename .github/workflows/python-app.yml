@@ -19,9 +19,9 @@ jobs:
       with:
         python-version: 3.12.0  # Виберіть версію Python, яку ви хочете використовувати
 
-    #- name: Install Dependencies
-     # run: |
-        #pip install -r requirements.txt  # Замість цього встановіть свої власні залежності
+    - name: Program runs?
+      run: |
+        python -m py_compile tiktactoe.py
 
     - name: Compile Python File
       run: |
