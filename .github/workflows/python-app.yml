@@ -53,5 +53,4 @@ jobs:
             automated pr
           assignees: Dmitr9o
           reviewers: Dmitr9o
-          milestone: 1
           draft: false
