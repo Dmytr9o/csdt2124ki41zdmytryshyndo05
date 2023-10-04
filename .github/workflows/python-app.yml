@@ -7,10 +7,11 @@ on:
       - dev  # Змініть гілку, яку ви хочете використовувати
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
+    build:
+        runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
 
-  steps:
+
+    steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
