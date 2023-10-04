@@ -1,4 +1,4 @@
-#test
+#test1
 name: Python Build and Deploy
 
 on:
@@ -6,9 +6,11 @@ on:
     branches:
       - dev  # Змініть гілку, яку ви хочете використовувати
 
+
 jobs:
   build:
-    runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
+    runs-on: ubuntu-latest  
+
 
     steps:
     - name: Checkout Repository
@@ -19,27 +21,33 @@ jobs:
       with:
         python-version: 3.12.0  # Виберіть версію Python, яку ви хочете використовувати
 
-    - name: Program runs?
-      run: |
-        python -m py_compile tiktactoe.py
     - name: Compile Python File
       run: |
         pip install pyinstaller
-        pyinstaller --onefile tiktactoe.py
+        pyinstaller --onefile --clean --workpath ./compiled --distpath ./compiled/build  tiktactoe.py
  
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: python-build
-        path: build/tiktactoe # Вкажіть шлях до вашого скомпільованого файлу Python
+        path: ./compiled/build/tiktactoe # Вкажіть шлях до вашого скомпільованого файлу Python
 
-    - name: Pull
+    - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
           token: ${{ secrets.GH_SECRET }}
-          branch: feature-branch
+          commit-message: Update report
           committer: GitHub <noreply@github.com>
-          title: Запит на внесення змін
-          body: Додавання нової функціональності
-          base: main
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: future_branche
+          delete-branch: true
+          title: 'Update report'
+          body: |
+            Update report
+          labels: |
+            report
+            automated pr
+          assignees: Dmytr9o
+          draft: false
