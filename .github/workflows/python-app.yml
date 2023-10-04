@@ -37,12 +37,10 @@ jobs:
           token: ${{ secrets.GH_SECRET }}
           branch: feature-branch
           committer: GitHub <noreply@github.com>
-          title: Запит на внесення змін
-          body: Додавання нової функціональності
           base: main
           title: 'Update report'
           body: |
-            Додавання нової функціональності
+              Додавання нової функціональності
           labels: |
             report
             automated pr
