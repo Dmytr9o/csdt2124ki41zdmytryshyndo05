@@ -20,9 +20,17 @@ jobs:
     - name: Show current directory
       run: pwd
 
+    - name: Show ls(DEBUG 1)
+      run: ls
+
     - name: Set working directory
       run: cd $GITHUB_WORKSPACE
 
+    - name: Show ls(DEBUG 2)
+      run: ls
+    - name: Show current directory(DEBUG 2)
+      run: pwd
+  
     - name: Compile Python code
       run: python -m py_compile tiktaktoe.py
 
