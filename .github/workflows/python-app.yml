@@ -24,7 +24,7 @@ jobs:
     - name: Compile Python File
       run: |
         pip install pyinstaller
-        pyinstaller --onefile --clean --workpath ./compiled tiktactoe.py
+        pyinstaller --onefile --clean --workpath ./compiled --distpath ./compiled/build  tiktactoe.py
  
 
     - name: Upload Build Artifact
