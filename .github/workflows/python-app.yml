@@ -1,0 +1,39 @@
+#test
+name: Python Build and Deploy
+
+on:
+  push:
+    branches:
+      - dev  # Змініть гілку, яку ви хочете використовувати
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.12.0  # Виберіть версію Python, яку ви хочете використовувати
+
+    #- name: Install Dependencies
+     # run: |
+        #pip install -r requirements.txt  # Замість цього встановіть свої власні залежності
+
+    - name: Compile Python File
+      run: |
+        pip install pyinstaller
+        pyinstaller --onefile tiktactoe.py
+
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: python-build
+        path: tiktactoe.exe # Вкажіть шлях до вашого скомпільованого файлу Python
+
+  
+
