@@ -51,6 +51,6 @@ jobs:
           labels: |
             report
             automated pr
-          assignees: Dmitr9o
-          reviewers: Dmitr9o
+          assignees: Dmytr9o
+          reviewers: Dmytr9o
           draft: false
