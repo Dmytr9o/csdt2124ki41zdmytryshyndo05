@@ -32,7 +32,7 @@ jobs:
       run: pwd
   
     - name: Compile Python code
-      run: python -m py_compile tiktaktoe.py
+      run: python -m py_compile tiktactoe.py
 
     - name: Commit compiled files
       run: |
