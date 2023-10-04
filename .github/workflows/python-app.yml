@@ -37,7 +37,6 @@ jobs:
     - name: Commit compiled Python files
       run: |
         git config user.name "Dmytr9o"
-        git config user.email "youremail@example.com"
         git add __pycache__  # Додаємо файли, які були компільовані
         git commit -m "Add compiled Python files"
         git push --set-upstream origin $GITHUB_REF
