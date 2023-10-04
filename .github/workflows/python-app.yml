@@ -27,13 +27,14 @@ jobs:
       run: |
         pip install pyinstaller
         pyinstaller --onefile tiktactoe.py
-
+    - name: Chek all files in dir
+      run: ls
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: python-build
-        path: tiktactoe.exe # Вкажіть шлях до вашого скомпільованого файлу Python
+        path: dist/tiktactoe.exe # Вкажіть шлях до вашого скомпільованого файлу Python
 
   
 
