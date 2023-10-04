@@ -5,9 +5,11 @@ on:
   push:
     branches:
       - dev  # Змініть гілку, яку ви хочете використовувати
+
+
 jobs:
   build:
-    runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
+    runs-on: ubuntu-latest  
 
 
     steps:
