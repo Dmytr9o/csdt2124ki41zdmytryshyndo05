@@ -43,3 +43,14 @@ jobs:
           title: Запит на внесення змін
           body: Додавання нової функціональності
           base: main
+<<<<<<< HEAD
+=======
+          title: 'Update report'
+          body: |
+            Додавання нової функціональності
+          labels: |
+            report
+            automated pr
+          assignees: Dmytr9o
+          draft: false
+>>>>>>> dd8d3e6 (modified:   .github/workflows/python-app.yml)
