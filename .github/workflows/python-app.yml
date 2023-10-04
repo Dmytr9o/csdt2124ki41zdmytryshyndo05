@@ -41,7 +41,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: dev
+          branch: dev_1
           base: main
           delete-branch: true
           title: 'Update report'
