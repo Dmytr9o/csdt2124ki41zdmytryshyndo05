@@ -42,6 +42,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           base: main
+          branch: dev_1
           delete-branch: true
           title: 'Update report'
           body: |
