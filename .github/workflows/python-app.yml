@@ -34,10 +34,13 @@ jobs:
     - name: Compile Python code
       run: python -m py_compile tiktactoe.py
 
-    - name: Commit compiled files
+    - name: Commit compiled Python files
       run: |
         git config user.name "Dmytr9o"
-        git config user.email "d.dmytryshyn.o@gmail.com"
+        git config user.email "youremail@example.com"
         git add __pycache__  # Додаємо файли, які були компільовані
         git commit -m "Add compiled Python files"
-        git push
+        git push --set-upstream origin $GITHUB_REF
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
