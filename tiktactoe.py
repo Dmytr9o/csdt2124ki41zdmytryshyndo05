@@ -1,8 +1,8 @@
 #Test
-def print_board(board):
-    for row in board:
-        print(" | ".join(row))
-        print("-" * 9)
+#def print_board(board):
+    #for row in board:
+        #print(" | ".join(row))
+        #print("-" * 9)
 
 
 def check_winner(board, player):
@@ -48,8 +48,7 @@ def main():
             break
 
         current_player = "O" if current_player == "X" else "X"
-#test2
-#Test errors
-#if __name__ == "__main__":
-  #  main()
-#Coment to dev
+
+if __name__ == "__main__":
+    main()
+
