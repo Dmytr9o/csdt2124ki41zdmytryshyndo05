@@ -19,13 +19,6 @@ jobs:
       with:
         python-version: 3.12.0  # Виберіть версію Python, яку ви хочете використовувати
 
-<<<<<<< HEAD
-    - name: Program runs?
-      run: |
-        python -m py_compile tiktactoe.py
-=======
-
->>>>>>> b4b8798 (modified:   .github/workflows/python-app.yml)
     - name: Compile Python File
       run: |
         pip install pyinstaller
