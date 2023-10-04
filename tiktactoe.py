@@ -49,7 +49,7 @@ def main():
 
         current_player = "O" if current_player == "X" else "X"
 
-
-if __name__ == "__main__":
-    main()
+#Test errors
+#if __name__ == "__main__":
+  #  main()
 #Coment to dev
