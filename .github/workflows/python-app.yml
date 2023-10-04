@@ -30,7 +30,7 @@ jobs:
     - name: Check all files in dir
       run: |
           ls
-          cd dict
+          cd dist
           ls
           pwd
 
