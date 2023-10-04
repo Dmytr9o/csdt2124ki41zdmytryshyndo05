@@ -17,6 +17,11 @@ jobs:
 
     #- name: Install dependencies
     #  run: pip install -r requirements.txt  # Якщо у вас є файли вимог, ви можете їх встановити тут
+    - name: Show current directory
+      run: pwd
+
+    - name: Set working directory
+      run: cd $GITHUB_WORKSPACE
 
     - name: Compile Python code
       run: python -m py_compile tiktaktoe.py
