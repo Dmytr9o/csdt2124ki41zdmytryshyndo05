@@ -42,5 +42,5 @@ jobs:
         git commit -m "Add compiled Python files"
         git push --set-upstream origin $GITHUB_REF
       env:
-        GITHUB_TOKEN: ${{ secrets.NEW_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
