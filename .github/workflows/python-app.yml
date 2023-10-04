@@ -36,4 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest https://github.com/Dmytr9o/csdt2124ki41zdmytryshyndo05/blob/76cc0818ecef8fd26689fb16b5e04f47772a9c59/tiktactoe.py
+        pytest /home/runner/work/csdt2124ki41zdmytryshyndo05/csdt2124ki41zdmytryshyndo05tiktactoe.py
