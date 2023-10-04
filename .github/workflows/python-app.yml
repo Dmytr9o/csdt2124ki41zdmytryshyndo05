@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - dev  # Змініть гілку, яку ви хочете використовувати
-
 jobs:
   build:
     runs-on: ubuntu-latest  # Ви можете вибрати інший образ, який підходить вам
@@ -32,9 +31,9 @@ jobs:
         name: python-build
         path: /compiled/build/tiktactoe # Вкажіть шлях до вашого скомпільованого файлу Python
 
-     - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
           token: ${{ secrets.GH_SECRET }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
