@@ -36,8 +36,8 @@ jobs:
         path: build/tiktactoe # Вкажіть шлях до вашого скомпільованого файлу Python
 
     - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
+      uses: peter-evans/create-pull-request@v5
+      with:
           token: ${{ secrets.GH_SECRET }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
